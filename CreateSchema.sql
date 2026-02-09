@@ -2,17 +2,17 @@
 USE master;
 GO
 
-IF EXISTS (SELECT name FROM sys.databases WHERE name = 'RestaurantReservationDB')
+IF DB_ID('RestaurantDB') IS NOT NULL
 BEGIN
-    ALTER DATABASE RestaurantReservationDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
-    DROP DATABASE RestaurantReservationDB;
+    ALTER DATABASE RestaurantDB SET SINGLE_USER WITH ROLLBACK IMMEDIATE;
+    DROP DATABASE RestaurantDB;
 END
 GO
 
-CREATE DATABASE RestaurantReservationDB;
+CREATE DATABASE RestaurantDB;
 GO
 
-USE RestaurantReservationDB;
+USE RestaurantDB;
 GO
 
 -- Restaurants
