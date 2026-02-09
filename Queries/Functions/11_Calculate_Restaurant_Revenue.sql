@@ -4,7 +4,7 @@ GO
 -- Database Function - Calculate Restaurant Revenue:
 -- Function Name: fn_CalculateRevenue
 -- Purpose: Compute revenue made by a specific restaurant
---*Parameter: RestaurantId
+-- Parameter: RestaurantId
 -- Return: total revenue amount for the RestaurantId
 CREATE FUNCTION fn_CalculateRevenue (@RestaurantId INT)
 RETURNS DECIMAL(10,2)
@@ -19,4 +19,3 @@ BEGIN
 
     RETURN ISNULL(@Revenue, 0);
 END;
-GO
