@@ -2,7 +2,6 @@ USE RestaurantDB;
 GO
 
 -- Use a view to list all reservations information including restaurants and customers information
-
 CREATE VIEW vw_ReservationReport AS
 SELECT r.ReservationId, r.ReservationDate, r.PartySize, 
     rest.Name AS RestaurantName, rest.Address, rest.PhoneNumber AS RestaurantPhone, 
